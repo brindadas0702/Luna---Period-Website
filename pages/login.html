@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna - Login</title>
+    <link rel="stylesheet" href="style/login-signup-style.css">
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav class="navbar">
+        <a href="home.html" class="back-btn">&larr; Back</a>
+        <a href="home.html">
+            <div class="nav-brand">Luna</div>
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="signup-card">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Log in to track your cycle and insights</p>
+
+            <!-- Form -->
+            <form action="login_process.php" method="POST" id="loginForm">
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Button -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Get Started</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+
+            </form>
+
+            <!-- Link -->
+            <div class="link">
+                Don't have an account? <a href="signup.html">Sign up instead</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript/login-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna - Admin Panel</title>
+    <link rel="stylesheet" href="style/admin-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Luna Admin</a>
+        <div class="nav-links">
+            <a href="index.html" class="btn-logout">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>User Directory</h1>
+            <p>View accounts available in Luna</p>
+        </header>
+
+        <!-- User Accounts Table Card -->
+        <div class="card-glass">
+            <div class="table-header">
+                <h2>Active Users</h2>
+                <span class="user-count" id="userCount">0 Users Total</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- Dynamic rows injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Luna - Admin Dashboard. All rights reserved.</p>
+    </footer>
+    <script src="admin-script.js"></script>
+</body>
+</html>

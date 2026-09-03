@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna - Sign Up</title>
+    <link rel="stylesheet" href="style/login-signup-style.css">
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav class="navbar">
+        <a href="home.html" class="back-btn">&larr; Back</a>
+        <a href="home.html">
+            <div class="nav-brand">Luna</div>
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="signup-card">
+            <h2>Create Your Account</h2>
+            <p class="subtitle">Join Luna to start tracking your cycle</p>
+
+            <!-- Form -->
+            <form action="register_process.php" method="POST" id="signupForm">
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Get Started</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+
+            </form>
+
+            <!-- Link -->
+            <div class="link">
+                Already have an account? <a href="login.html">Login instead</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript/signup-app.js"></script>
+</body>
+
+</html>

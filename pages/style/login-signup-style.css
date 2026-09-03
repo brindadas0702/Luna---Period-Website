@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #120306 0%, #3b0a0a 35%, #800000 70%, #a23947 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav bar */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(18, 3, 6, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.back-btn {
+    color: #ffd1dc; 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+/* Form Container */
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Sign-up Card */
+.signup-card {
+    background: rgba(30, 10, 15, 0.75);
+    border: 1px solid rgba(255, 209, 220, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.signup-card h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #ffd1dc;
+    margin-bottom: 25px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #4a1c22;
+    background: rgba(15, 5, 8, 0.6);
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #ffb6c1; 
+}
+
+/* Form Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Get Started Button */
+.btn-primary {
+    background-color: #b30000; 
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #d60000;
+}
+
+/* Reset Button */
+.btn-secondary {
+    background-color: transparent;
+    color: #ffd1dc;
+    border: 1px solid #ffd1dc;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 209, 220, 0.1);
+}
+
+/* Link */
+.link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #cccccc;
+}
+
+.link a {
+    color: #ffb6c1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 25px;
+    text-align: center;
+    background: rgba(18, 3, 6, 0.6);
+    border-top: 1px solid rgba(255, 209, 220, 0.1);
+    font-size: 0.85rem;
+    color: #cccccc;
+}

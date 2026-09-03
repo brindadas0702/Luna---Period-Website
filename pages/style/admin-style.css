@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #120306 0%, #3b0a0a 35%, #800000 70%, #a23947 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NavBar */
+.navbar {
+    width: 100%;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(18, 3, 6, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 209, 220, 0.1);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-logout {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #ffd1dc;
+    border: 1px solid #ffd1dc;
+    transition: background 0.2s ease;
+}
+
+.btn-logout:hover {
+    background: rgba(255, 209, 220, 0.15);
+}
+
+/* Layout Container */
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.page-header p {
+    color: #ffd1dc;
+    font-size: 0.95rem;
+}
+
+/* Card */
+.card-glass {
+    background: rgba(30, 10, 15, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 209, 220, 0.15);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Table Section Controls */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.user-count {
+    font-size: 0.85rem;
+    color: #ffd1dc;
+    background: rgba(255, 209, 220, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 209, 220, 0.2);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.admin-table th {
+    padding: 12px 14px;
+    color: #ffd1dc;
+    border-bottom: 1px solid rgba(255, 209, 220, 0.2);
+    font-weight: 600;
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 209, 220, 0.08);
+    color: #e0e0e0;
+}
+
+/* Remove Action Button */
+.btn-remove {
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-remove:hover {
+    background-color: #d60000;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(18, 3, 6, 0.6);
+    border-top: 1px solid rgba(255, 209, 220, 0.1);
+    font-size: 0.85rem;
+    color: #cccccc;
+}
