@@ -12,8 +12,8 @@
 
     <!-- Nav bar -->
     <nav class="navbar">
-        <a href="home.html" class="back-btn">&larr; Back</a>
-        <a href="home.html">
+        <a href="home.php" class="back-btn">&larr; Back</a>
+        <a href="home.php">
             <div class="nav-brand">Luna</div>
         </a>
     </nav>
@@ -24,7 +24,7 @@
             <p class="subtitle">Join Luna to start tracking your cycle</p>
 
             <!-- Form -->
-            <form action="register_process.php" method="POST" id="signupForm">
+            <form action="/luna/register-process.php" method="POST" id="signupForm">
 
                 <!-- Name -->
                 <div class="form-group">
@@ -54,7 +54,7 @@
 
             <!-- Link -->
             <div class="link">
-                Already have an account? <a href="login.html">Login instead</a>
+                Already have an account? <a href="login.php">Login instead</a>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
         <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>
     </footer>
 
-    <script src="javascript/signup-app.js"></script>
+    <script src="javascript/signup-app.js?v=2"></script>
 </body>
 
 </html>

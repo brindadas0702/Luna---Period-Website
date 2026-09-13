@@ -11,11 +11,11 @@
 
     <!-- Nav Bar -->
     <nav class="navbar">
-        <a href="home.html" class="nav-item">&larr; Back</a>
+        <a href="home.php" class="nav-item">&larr; Back</a>
         <div class="nav-links">
-            <a href="period-tracker.html" class="nav-item">Tracker</a>
-            <a href="journal.html" class="nav-item">Journal</a>
-            <a href="phase-insight.html" class="nav-item active">Insight</a>
+            <a href="period-tracker.php" class="nav-item">Tracker</a>
+            <a href="journal.php" class="nav-item">Journal</a>
+            <a href="phase-insight.php" class="nav-item active">Insight</a>
         </div>
     </nav>
 
@@ -87,6 +87,6 @@
     <footer class="footer">
         <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>
     </footer>
-    <script src="javascript/phase-insight-app.js"></script>
+    <script src="javascript/phase-insight-app.js?v=2"></script>
 </body>
 </html>

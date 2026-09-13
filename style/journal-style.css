@@ -148,6 +148,13 @@ textarea.dark-input {
     align-items: center;
     justify-content: space-between;
     margin-top: 15px;
+    gap: 10px;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn-save {
@@ -194,4 +201,43 @@ textarea.dark-input {
     border-top: 1px solid rgba(255, 209, 220, 0.1);
     font-size: 0.85rem;
     color: #cccccc;
+}
+
+.btn-save,
+.btn-edit,
+.btn-delete {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-save {
+    background-color: #b30000;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #d60000;
+}
+
+.btn-edit {
+    background-color: #6b3f4a;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #8a5361;
+}
+
+.btn-delete {
+    background-color: #7a1f2b;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #a83245;
 }

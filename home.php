@@ -1,5 +1,10 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +12,25 @@
     <link rel="stylesheet" href="style/home-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Nav bar -->
     <nav class="navbar">
-        <a href="home.html"><div class="nav-brand">Luna</div></a>
+        <a href="home.php">
+            <div class="nav-brand">Luna</div>
+        </a>
         <div class="nav-links">
-            <!-- <a href="tracker.html" class="nav-item">Tracker</a> -->
-            <!-- <a href="journal.html" class="nav-item">Journal</a> -->
-            <a href="login.html" class="btn-nav btn-login">Login</a>
-            <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                <span class="nav-item">
+                    Hey <?php echo htmlspecialchars($_SESSION['user_name']); ?>!
+                </span>
+                <a href="logout.php" class="btn-nav btn-login">Logout</a>
+            <?php } else { ?>
+                <!-- Guest user -->
+                <a href="login.php" class="btn-nav btn-login">Login</a>
+                <a href="signup.php" class="btn-nav btn-signup">Sign Up</a>
+            <?php } ?>
         </div>
     </nav>
 
@@ -26,12 +40,18 @@
             <span class="badge">Gentle & Inclusive Health Tracking</span>
             <h1>Understand Your Body, Embrace Your Rhythms</h1>
             <p>
-                Luna is a simple, stigma-free menstrual health platform designed to help you easily track cycles, 
+                Luna is a simple, stigma-free menstrual health platform designed to help you easily track cycles,
                 log holistic symptoms, and receive supportive phase insights tailored to your life.
             </p>
             <div class="hero-buttons">
-                <a href="signup.html" class="btn btn-primary">Start Tracking Free</a>
-                <!-- <a href="period-tracker.html" class="btn btn-secondary">Open Calendar</a> -->
+
+                <?php if (!isset($_SESSION['user_id'])) { ?>
+
+                    <a href="signup.php" class="btn btn-primary">
+                        Start Tracking Free
+                    </a>
+
+                <?php } ?>
             </div>
         </div>
     </header>
@@ -40,7 +60,7 @@
     <section class="features-container">
         <h2 class="section-title">Designed for Your Well-being</h2>
         <div class="features-grid">
-            
+
             <!-- Feature 1 -->
             <div class="feature-card">
                 <div class="icon-wrapper">
@@ -48,7 +68,7 @@
                 </div>
                 <h3>Intuitive Cycle Tracker</h3>
                 <p>Log period dates easily on our interactive calendar and observe clear patterns across cycle phases.</p>
-                <a href="period-tracker.html" class="card-link">Launch Tracker &rarr;</a>
+                <a href="period-tracker.php" class="card-link">Launch Tracker &rarr;</a>
             </div>
 
             <!-- Feature 2 -->
@@ -58,7 +78,7 @@
                 </div>
                 <h3>Daily Health Journal</h3>
                 <p>Track your flow intensity, moods, acne, cramps, and free-text reflections in one private place.</p>
-                <a href="journal.html" class="card-link">View Journal &rarr;</a>
+                <a href="journal.php" class="card-link">View Journal &rarr;</a>
             </div>
 
             <!-- Feature 3 -->
@@ -68,7 +88,7 @@
                 </div>
                 <h3>Phase Insights & Guidance</h3>
                 <p>Gain actionable awareness into your follicular, ovulation, and luteal phases to better support your day.</p>
-                <a href="phase-insight.html" class="card-link">View Insight &rarr;</a>
+                <a href="phase-insight.php" class="card-link">View Insight &rarr;</a>
             </div>
 
             <!-- Feature 4 -->
@@ -90,4 +110,5 @@
     </footer>
 
 </body>
+
 </html>

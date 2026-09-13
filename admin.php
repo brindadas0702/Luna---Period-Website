@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luna - Admin Panel</title>
-    <link rel="stylesheet" href="style/admin-style.css">
+    <link rel="stylesheet" href="style/admin-style.css?v=2">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="nav-brand">Luna Admin</a>
+        <a href="home.php" class="nav-brand">Luna Admin</a>
         <div class="nav-links">
-            <a href="index.html" class="btn-logout">Logout</a>
+            <a href="home.php" class="btn-logout">Logout</a>
         </div>
     </nav>
 
@@ -33,7 +33,7 @@
                         <tr>
                             <th>User ID</th>
                             <th>Username</th>
-                            <th>Role</th>
+                            <th>Email</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -50,6 +50,6 @@
     <footer class="footer">
         <p>&copy; 2026 Luna - Admin Dashboard. All rights reserved.</p>
     </footer>
-    <script src="admin-script.js"></script>
+    <script src="javascript/admin-app.js"></script>
 </body>
 </html>

@@ -1,20 +1,30 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luna - Period Tracker</title>
     <link rel="stylesheet" href="style/period-tracker-style.css">
 </head>
+
 <body>
-    
+
     <!-- Nav Bar -->
     <nav class="navbar">
-        <a href="home.html" class="nav-item">&larr; Back</a>
+        <a href="home.php" class="nav-item">&larr; Back</a>
         <div class="nav-links">
-            <a href="period-tracker.html" class="nav-item active">Tracker</a>
-            <a href="journal.html" class="nav-item">Journal</a>
-            <a href="phase-insight.html" class="nav-item">Insight</a>
+            <a href="period-tracker.php" class="nav-item active">Tracker</a>
+            <a href="journal.php" class="nav-item">Journal</a>
+            <a href="phase-insight.php" class="nav-item">Insight</a>
         </div>
     </nav>
 
@@ -57,7 +67,8 @@
     <footer class="footer">
         <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>
     </footer>
-    
-    <script src="javascript/period-tracker-app.js"></script>
+
+    <script src="javascript/period-tracker-app.js?v=3"></script>
 </body>
+
 </html>

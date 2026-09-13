@@ -156,3 +156,26 @@ body {
     font-size: 0.85rem;
     color: #cccccc;
 }
+
+/* DELETE / REMOVE BUTTON */
+
+.btn-delete {
+    background-color: #7a1f2b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background-color: #a83245;
+    transform: translateY(-1px);
+}
+
+.btn-delete:active {
+    transform: translateY(0);
+}
