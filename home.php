@@ -104,6 +104,32 @@ session_start();
         </div>
     </section>
 
+<script src="javascript/period-reminder.js"></script>
+    <!-- Luna Period Reminder Popup -->
+    <div id="periodReminderModal" class="period-reminder-overlay" hidden>
+        <div
+            class="period-reminder-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="periodReminderTitle">
+            <div class="period-reminder-icon">🌸</div>
+
+            <h2 id="periodReminderTitle">A gentle reminder</h2>
+
+            <p id="periodReminderMessage">
+                Your period may be coming soon.
+            </p>
+
+            <p class="period-reminder-note">
+                This is an estimate based on your recorded cycle.
+            </p>
+
+            <button type="button" id="periodReminderOk">
+                OK
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Luna - Your Cycle Companion. All rights reserved.</p>

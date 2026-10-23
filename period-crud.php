@@ -12,7 +12,6 @@ if (!isset($_SESSION['user_id'])) {
     ]);
 
     exit();
-
 }
 
 $user_id = $_SESSION['user_id'];
@@ -35,7 +34,6 @@ if ($action == "create") {
         ]);
 
         exit();
-
     }
 
     $stmt = $conn->prepare(
@@ -56,7 +54,6 @@ if ($action == "create") {
         ]);
 
         exit();
-
     }
 
     $stmt = $conn->prepare(
@@ -115,7 +112,6 @@ if ($action == "update") {
         ]);
 
         exit();
-
     }
 
     $stmt = $conn->prepare(
@@ -151,7 +147,6 @@ if ($action == "delete") {
         ]);
 
         exit();
-
     }
 
     $stmt = $conn->prepare(
@@ -177,5 +172,3 @@ echo json_encode([
     "success" => false,
     "message" => "Invalid action."
 ]);
-
-?>

@@ -240,6 +240,92 @@ body {
     opacity: 0.7;
 }
 
+/* Reminder Section */
+
+.period-reminder-overlay[hidden] {
+    display: none !important;
+}
+
+.period-reminder-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(35, 20, 45, 0.55);
+    backdrop-filter: blur(5px);
+}
+
+.period-reminder-box {
+    width: 100%;
+    max-width: 390px;
+    padding: 30px 25px;
+    text-align: center;
+    background: #fffaff;
+    border: 1px solid #f0d9fa;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(70, 30, 90, 0.2);
+    font-family: inherit;
+    animation: reminderAppear 0.25s ease-out;
+}
+
+.period-reminder-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.period-reminder-box h2 {
+    color: #bf0000;
+    margin: 0 0 12px;
+    font-size: 23px;
+}
+
+.period-reminder-box p {
+    color: #860000;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.period-reminder-box .period-reminder-note {
+    color: #000000;
+    font-size: 12px;
+}
+
+#periodReminderOk {
+    margin-top: 15px;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px;
+    background: #bf0000;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#periodReminderOk:hover {
+    background: #620101;
+}
+
+#periodReminderOk:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+@keyframes reminderAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* Footer */
 .footer {
     margin-top: auto;

@@ -27,11 +27,22 @@ CREATE TABLE journal_entries (
     UNIQUE(user_id, journal_date)
 );
 
+CREATE TABLE period_reminder_dismissals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    expected_period_date DATE NOT NULL,
+    dismissed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_user_reminder (
+        user_id,
+        expected_period_date
+    )
+);
+
 select * from users;
 select * from period_days;
 select * from journal_entries;
+select * from period_reminder_dismissals;
 
 -- Passwords
--- Om - omgohil
 -- Gwen Stacy - gwenstacy
 -- Brinda Das - brindadas

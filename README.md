@@ -24,26 +24,47 @@ Note:Luna provides general educational information and cycle estimates. It is no
 
 ## Database Overview
 
-| Table | Purpose |
-| `users` | Stores account name, email, and password hash |
-| `period_days` | Stores period dates associated with each user |
-| `journal_entries` | Stores a user's daily flow, mood, symptoms, and notes |
+Luna uses a MySQL database named `luna` to store user accounts, period tracking records, journal entries, and period reminder dismissals.
 
-The registration handler hashes passwords with PHP's `password_hash()` and login verifies them with `password_verify()`.
+| Table | Purpose |
+|---|---|
+| `users` | Stores user account details, including name, email, and password hash. |
+| `period_days` | Stores period dates linked to individual users. |
+| `journal_entries` | Stores daily journal information, including flow, mood, symptoms, and personal notes. Each user can have one journal entry per date. |
+| `period_reminder_dismissals` | Stores dismissed period reminders for each user to prevent the same reminder from appearing repeatedly for the same expected period date. |
+
+### Database Relationships
+
+- Each user can have multiple period records.
+- Each user can have multiple journal entries, with one entry per date.
+- Each user can dismiss multiple period reminders.
+- Foreign key constraints maintain relationships between users and their period and journal records, with associated records deleted when a user is deleted.
+
+### Database Setup
+
+Create the database and tables by executing the SQL schema provided in the project’s database setup script.
 
 ## Important Notes
 
-- Cycle-phase information is a simplified estimate based on saved period dates and a 28-day cycle assumption in the current JavaScript implementation. Individual cycles vary, so the estimate may not match every user's experience.
-- This project is intended for learning and demonstration. Before public deployment, review authentication and authorization (especially administrative pages), input validation, session security, privacy practices, CSRF protection, error handling, and database credential management.
-- Menstrual and journal information is sensitive personal data. Use test data while developing and do not publish private user records.
+-Cycle-phase information is a simplified estimate based on saved period dates and a 28-day cycle assumption. Individual menstrual cycles vary, so predictions may not match every user's experience.
+
+-Period reminders are estimates based on recorded dates and are intended for general awareness, not medical diagnosis.
+
+-This project is intended for educational and demonstration purposes. Before public deployment, review authentication and authorization, especially for administrative pages, input validation, session security, CSRF protection, error handling, privacy practices, and database credential management.
+
+-Menstrual and journal information is sensitive personal data. Use test data during development and never publish private user records.
 
 ## Future Improvements
 
-- Let users configure their typical cycle length and period duration.
-- Add clearer cycle-history summaries and optional reminders.
-- Improve accessibility and mobile testing.
-- Add stronger access controls for administrative features.
-- Move database secrets to environment configuration and add deployment documentation.
+- Allow users to customize their typical cycle length and period duration.
+
+- Provide clearer cycle-history summaries and customizable reminder settings.
+
+- Improve accessibility and conduct additional mobile-device testing.
+
+- Strengthen authentication and access controls for administrative features.
+
+- Store database credentials securely using environment configuration and provide detailed deployment instructions.
 
 ## License
 
